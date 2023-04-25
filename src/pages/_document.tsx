@@ -10,20 +10,20 @@ export default function Document() {
         <meta name="title" content="Proof of Funds" />
         <meta
           name="description"
-          content="A repository to celebrate the work of talented Argentinian designers and showcase it to the world."
+          content="Listados de exchanges argentinos de criptomonedas y sus informes de transparencia."
         />
 
         {/* <!-- Open Graph / Facebook --/> */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://argentinianswho.design" />
+        <meta property="og:url" content="https://proof-of-funds.vercel.app" />
         <meta property="og:title" content="Proof of Funds" />
         <meta
           property="og:description"
-          content="A repository of talented Argentinian designers."
+          content="Listados de exchanges argentinos de criptomonedas y sus informes de transparencia."
         />
         <meta
           property="og:image"
-          content="https://argentinianswho.design/img/preview.png"
+          content="https://proof-of-funds.vercel.app/img/preview.png"
         />
 
         <meta
@@ -38,39 +38,33 @@ export default function Document() {
         />
 
         {/* Facebook Meta Tags */}
-        <meta
-          property="og:url"
-          content="https://argentinians-who-design.vercel.app/"
-        />
+        <meta property="og:url" content="https://proof-of-funds.vercel.app/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Proof of Funds" />
         <meta
           property="og:description"
-          content="A repository of talented Argentinian designers."
+          content="Listados de exchanges argentinos de criptomonedas y sus informes de transparencia."
         />
         <meta
           property="og:image"
-          content="https://argentinianswho.design/img/preview.png"
+          content="https://proof-of-funds.vercel.app/img/preview.png"
         />
 
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:domain"
-          content="argentinians-who-design.vercel.app"
-        />
+        <meta property="twitter:domain" content="proof-of-funds.vercel.app" />
         <meta
           property="twitter:url"
-          content="https://argentinians-who-design.vercel.app/"
+          content="https://proof-of-funds.vercel.app/"
         />
         <meta name="twitter:title" content="Proof of Funds" />
         <meta
           name="twitter:description"
-          content="A repository of talented Argentinian designers."
+          content="Listados de exchanges argentinos de criptomonedas y sus informes de transparencia."
         />
         <meta
           name="twitter:image"
-          content="https://argentinianswho.design/img/preview.png"
+          content="https://proof-of-funds.vercel.app/img/preview.png"
         />
       </Head>
       <body className="bg-black text-[#CECECE]">
