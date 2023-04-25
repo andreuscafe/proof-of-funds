@@ -214,16 +214,16 @@ export default function Home() {
 
         <section className="mt-10 lg:mt-36">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-4">
-            <span className="text-xs lg:col-span-3 text-[#6E6E73]">
+            <span className="text-xs lg:col-span-3 text-[#95959f]">
               Exchange
             </span>
-            <span className="text-xs col-span-3 text-[#6E6E73] hidden lg:block">
+            <span className="text-xs col-span-3 text-[#95959f] hidden lg:block">
               Documentos
             </span>
-            <span className="text-xs col-span-2 text-[#6E6E73] hidden lg:block">
+            <span className="text-xs col-span-2 text-[#95959f] hidden lg:block">
               Última actualización
             </span>
-            <span className="text-xs col-span-4 text-[#6E6E73] hidden lg:block">
+            <span className="text-xs col-span-4 text-[#95959f] hidden lg:block">
               Notas
             </span>
           </div>
@@ -250,8 +250,8 @@ export default function Home() {
                   <CryptoText text={exchange.name} />
                 </Link>
 
-                <span className="lg:col-span-3 text-[#6E6E73]">
-                  <span className="col-span-3 text-xs text-[#6E6E73] font-mono block lg:hidden mb-2">
+                <span className="lg:col-span-3 text-[#95959f]">
+                  <span className="col-span-3 text-xs text-[#95959f] font-mono block lg:hidden mb-2">
                     Documentos
                   </span>
                   {exchange.docs.url ? (
@@ -271,17 +271,17 @@ export default function Home() {
 
                 <span
                   className={`lg:col-span-2 ${
-                    !exchange.last_update ? "text-[#6E6E73]" : ""
+                    !exchange.last_update ? "text-[#95959f]" : ""
                   }`}
                 >
-                  <span className="col-span-3 text-xs text-[#6E6E73] font-mono block lg:hidden mb-2">
+                  <span className="col-span-3 text-xs text-[#95959f] font-mono block lg:hidden mb-2">
                     Última actualización
                   </span>
                   {exchange.last_update ? exchange.last_update : "-"}
                 </span>
 
-                <span className="lg:col-span-4 text-[#6E6E73]">
-                  <span className="col-span-3 text-xs text-[#6E6E73] font-mono block lg:hidden mb-2">
+                <span className="lg:col-span-4 text-[#95959f]">
+                  <span className="col-span-3 text-xs text-[#95959f] font-mono block lg:hidden mb-2">
                     Notas
                   </span>
                   {exchange.notes ? (
