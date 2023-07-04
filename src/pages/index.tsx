@@ -54,7 +54,7 @@ export default function Home({ exchanges }: HomeProps) {
           <a
             href="https://argentinianswho.design/"
             target="_blank"
-            className="sol w-[96px] order-first lg:order-last lg:col-start-12 lg:col-span-2"
+            className="sol w-[96px] order-first lg:order-last lg:col-start-12 col-span-1 lg:col-span-2"
           >
             <div className="normal">
               <Image
