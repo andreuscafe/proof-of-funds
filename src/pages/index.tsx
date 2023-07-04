@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { Space_Mono, Roboto } from "next/font/google";
@@ -8,8 +9,10 @@ import { ExchangesType, HomeProps } from "../types";
 
 import { ArrowSvg } from "@/components/ArrowSvg";
 import { CryptoText } from "@/components/CryptoText";
+import { ChevronSvg } from "@/components/ChevronSvg";
 
 import { getLocalData } from "../lib/localData";
+import { orderFunction } from "@/utils/utils";
 
 const space_mono = Space_Mono({
   variable: "--font-space-mono",
@@ -35,6 +38,10 @@ export async function getStaticProps() {
 }
 
 export default function Home({ exchanges }: HomeProps) {
+  const [order, setOrder] = useState<"asc" | "desc">("desc");
+
+  const orderedExchanges = exchanges.sort(orderFunction(order));
+
   return (
     <>
       <Head>
@@ -85,8 +92,14 @@ export default function Home({ exchanges }: HomeProps) {
             <span className="text-xs col-span-3 text-[#95959f] hidden lg:block">
               Documentos
             </span>
-            <span className="text-xs col-span-2 text-[#95959f] hidden lg:block">
-              Actualización
+            <span className="text-xs col-span-2 text-[#95959f] hidden lg:flex lg:gap-1 lg:items-center">
+              Actualizado
+              <ChevronSvg
+                className={`w-5 flex-shrink-0 flex items-center cursor-pointer ${
+                  order === "asc" && "rotate-180"
+                }`}
+                onClick={() => setOrder(order === "asc" ? "desc" : "asc")}
+              />
             </span>
             <span className="text-xs col-span-4 text-[#95959f] hidden lg:block">
               Estado
@@ -94,7 +107,7 @@ export default function Home({ exchanges }: HomeProps) {
           </div>
 
           <div className="font-roboto">
-            {exchanges.map((exchange, index) => (
+            {orderedExchanges.map((exchange, index) => (
               <div
                 key={index}
                 className={` grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 border-b border-[#333333] pt-6 first-of-type:border-y first-of-type:pt-3 pb-6 lg:py-3 items-center text-[#CECECE] lg:hover:bg-[#111] hover:text-white transition-colors`}
@@ -140,14 +153,14 @@ export default function Home({ exchanges }: HomeProps) {
                   }`}
                 >
                   <span className="col-span-3 text-xs text-[#95959f] font-mono block lg:hidden mb-2">
-                    Última actualización
+                    Actualizado
                   </span>
                   {exchange.last_update ? exchange.last_update : "-"}
                 </span>
 
                 <span className="lg:col-span-4 text-[#95959f]">
                   <span className="col-span-3 text-xs text-[#95959f] font-mono block lg:hidden mb-2">
-                    Notas
+                    Estado
                   </span>
                   {exchange.notes ? (
                     exchange.notes.url ? (

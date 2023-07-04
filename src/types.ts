@@ -1,6 +1,6 @@
 import { StaticImageData } from 'next/image';
 
-export type ExchangesType = Array<{
+export type ExchangeType = {
     name: string;
     iconPath: StaticImageData;
     url: string;
@@ -13,7 +13,9 @@ export type ExchangesType = Array<{
         text: string;
         url?: string;
     };
-}>;
+}
+
+export type ExchangesType = Array<ExchangeType>;
 
 export type HomeProps = {
     exchanges: ExchangesType;
