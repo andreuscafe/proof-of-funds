@@ -97,7 +97,7 @@ export default function Home({ exchanges }: HomeProps) {
             {exchanges.map((exchange, index) => (
               <div
                 key={index}
-                className={`grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 border-b border-[#333333] pt-6 first-of-type:pt-3 pb-6 lg:py-3 items-center text-[#CECECE] lg:hover:bg-[#03030F] hover:text-white transition-colors`}
+                className={` grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 border-b border-[#333333] pt-6 first-of-type:pt-3 pb-6 lg:py-3 items-center text-[#CECECE] lg:hover:bg-[#333] hover:text-white transition-colors`}
               >
                 <Link
                   href={exchange.url}
