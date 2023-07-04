@@ -15,14 +15,14 @@ const space_mono = Space_Mono({
   variable: "--font-space-mono",
   subsets: ["latin"],
   weight: "400",
-  style: "normal"
+  style: "normal",
 });
 
 const roboto = Roboto({
   variable: "--font-roboto",
   subsets: ["latin"],
   weight: "400",
-  style: "normal"
+  style: "normal",
 });
 
 export async function getStaticProps() {
@@ -54,7 +54,7 @@ export default function Home({ exchanges }: HomeProps) {
           <a
             href="https://argentinianswho.design/"
             target="_blank"
-            className="sol w-[64px] order-first lg:order-last lg:col-start-12 col-span-1"
+            className="sol w-[96px] order-first lg:order-last lg:col-start-12 col-span-1"
           >
             <div className="normal">
               <Image
@@ -89,7 +89,7 @@ export default function Home({ exchanges }: HomeProps) {
               Última actualización
             </span>
             <span className="text-xs col-span-4 text-[#95959f] hidden lg:block">
-              Notas
+              Estado
             </span>
           </div>
 
@@ -97,7 +97,7 @@ export default function Home({ exchanges }: HomeProps) {
             {exchanges.map((exchange, index) => (
               <div
                 key={index}
-                className={`grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 border-b border-[#333333] pt-6 first-of-type:pt-3 pb-6 lg:py-3 items-center text-[#CECECE] lg:hover:bg-[#03030F] hover:text-white transition-colors`}
+                className={` grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 border-b border-[#333333] pt-6 first-of-type:border-y first-of-type:pt-3 pb-6 lg:py-3 items-center text-[#CECECE] lg:hover:bg-[#111] hover:text-white transition-colors`}
               >
                 <Link
                   href={exchange.url}
