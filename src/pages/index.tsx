@@ -173,7 +173,7 @@ export default function Home({ exchanges }: HomeProps) {
         </section>
 
         <footer className="mt-36 lg:flex lg:justify-between text-[#6E6E73]">
-          <p>
+          <p className="text-[12px] leading-[14px]">
             <span>
               Agradecimientos a{" "}
               <a
@@ -207,7 +207,7 @@ export default function Home({ exchanges }: HomeProps) {
               por la implementación.
             </span>
           </p>
-          <p>
+          <p className="text-[12px] leading-[14px]">
             Si queres colaborar con algún dato, escribime a{" "}
             <a
               href="https://twitter.com/f0go"
@@ -216,7 +216,6 @@ export default function Home({ exchanges }: HomeProps) {
               className="underline inline-flex gap-1"
             >
               @f0go
-              <ArrowSvg className="w-4 " />
             </a>
           </p>
         </footer>
