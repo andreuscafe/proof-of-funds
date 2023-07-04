@@ -172,7 +172,7 @@ export default function Home({ exchanges }: HomeProps) {
           </div>
         </section>
 
-        <footer className="mt-12 lg:flex lg:justify-between">
+        <footer className="mt-36 lg:flex lg:justify-between text-[#6E6E73]">
           <p>
             <span>
               Agradecimientos a{" "}
@@ -180,7 +180,7 @@ export default function Home({ exchanges }: HomeProps) {
                 href="https://twitter.com/facumontanaro_"
                 target="_blank"
                 rel="noreferrer"
-                className="underline text-[#CECECE] inline-flex gap-1"
+                className="underline inline-flex gap-1"
               >
                 Facu Montanaro
               </a>{" "}
@@ -191,7 +191,7 @@ export default function Home({ exchanges }: HomeProps) {
                 href="https://twitter.com/AndreusCafe"
                 target="_blank"
                 rel="noreferrer"
-                className="underline text-[#CECECE] inline-flex gap-1"
+                className="underline inline-flex gap-1"
               >
                 Andrés Tonello
               </a>{" "}
@@ -200,25 +200,25 @@ export default function Home({ exchanges }: HomeProps) {
                 href="https://twitter.com/_LautaroLopez"
                 target="_blank"
                 rel="noreferrer"
-                className="underline text-[#CECECE] inline-flex gap-1"
+                className="underline inline-flex gap-1"
               >
                 Lautaro López
               </a>{" "}
               por la implementación.
             </span>
           </p>
-          <span>
+          <p>
             Si queres colaborar con algún dato, escribime a{" "}
             <a
               href="https://twitter.com/f0go"
               target="_blank"
               rel="noreferrer"
-              className="underline text-[#CECECE] inline-flex gap-1"
+              className="underline inline-flex gap-1"
             >
               @f0go
               <ArrowSvg className="w-4 " />
             </a>
-          </span>
+          </p>
         </footer>
       </main>
     </>
