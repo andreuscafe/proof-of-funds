@@ -1,0 +1,119 @@
+[
+    {
+        "name": "Lemon Cash",
+        "iconPath": "/img/icons/lemon.png",
+        "url": "https://www.lemon.me/",
+        "docs": {
+            "text": "Prueba de fondos",
+            "url": "https://api.lemoncash.com.ar/api/v1/reserves"
+        },
+        "last_update": "Realtime",
+        "notes": {
+            "text": "Estan trabajando en una versión trustless y real-time",
+            "url": "https://medium.com/@limoncit0/transparencia-radical-para-cexs-85aad29d8caf"
+        }
+    },
+    {
+        "name": "BuenBit",
+        "iconPath": "/img/icons/buenbit.png",
+        "url": "https://www.buenbit.com/",
+        "docs": {
+            "text": "Prueba de fondos",
+            "url": "https://drive.google.com/file/d/1kVSy8-aeO0hLFlB17ZX_x-w7339xpe34/view"
+        },
+        "last_update": "11/11/2022",
+        "notes": {
+            "text": "No muestra address de las wallets"
+        }
+    },
+    {
+        "name": "Bitso",
+        "iconPath": "/img/icons/bitso.png",
+        "url": "https://bitso.com/",
+        "docs": {
+            "text": "Post sobre transparencia",
+            "url": "https://blog.bitso.com/es-mx/bitso-mx/daniel-vogel-bitso-declaracion-nov-10-2022"
+        },
+        "last_update": "10/11/2022",
+        "notes": {
+            "text": "Dicen estar trabajando en un PoF",
+            "url": "https://twitter.com/julian_colombo/status/1594713538722930688?s=61&t=5auPmOJkhMmtSTviaZ9McQ"
+        }
+    },
+    {
+        "name": "ArgenBTC",
+        "iconPath": "/img/icons/argenbtc.png",
+        "url": "https://argenbtc.com/",
+        "docs": {
+            "text": "No presenta"
+        },
+        "notes": {
+            "text": "Dicen estar trabajando en un PoF",
+            "url": "https://twitter.com/argenbtc/status/1595480520716173325?s=61&t=8sALSsLKhwBRtfWwE4GulQ"
+        }
+    },
+    {
+        "name": "Belo",
+        "iconPath": "/img/icons/belo.png",
+        "url": "https://www.belo.app/",
+        "docs": {
+            "text": "No presenta"
+        },
+        "notes": {
+            "text": "Dicen estar trabajando en un PoF",
+            "url": "https://twitter.com/locosombrero/status/1593784229619449857?s=61&t=_pfJbg1Qq7rT-oabJ3d9Zg"
+        }
+    },
+    {
+        "name": "Decrypto",
+        "iconPath": "/img/icons/decrypto.png",
+        "url": "https://www.decrypto.la/",
+        "docs": {
+            "text": "No presenta"
+        },
+        "notes": {
+            "text": "Dicen estar trabajando en un PoF",
+            "url": "https://twitter.com/jl_palacio/status/1595126400108744705?s=61&t=cwVqNmTaVbXgXFQhfaHQpA"
+        }
+    },
+    {
+        "name": "Let's Bit",
+        "iconPath": "/img/icons/letsbit.png",
+        "url": "https://letsbit.io/",
+        "docs": {
+            "text": "No presenta"
+        }
+    },
+    {
+        "name": "Ripio",
+        "iconPath": "/img/icons/ripio.png",
+        "url": "https://www.ripio.com/",
+        "docs": {
+            "text": "No presenta"
+        }
+    },
+    {
+        "name": "SatoshiTango",
+        "iconPath": "/img/icons/satoshitango.png",
+        "url": "https://www.satoshitango.com/",
+        "docs": {
+            "text": "No presenta"
+        },
+        "notes": {
+            "text": "No ofrecen rendimientos pero igual estan trabajando en un PoF",
+            "url": "https://twitter.com/satoshitango/status/1595468937659092992?s=61&t=8sALSsLKhwBRtfWwE4GulQ"
+        }
+    },
+    {
+        "name": "TiendaCrypto",
+        "iconPath": "/img/icons/tiendacrypto.png",
+        "url": "https://tiendacrypto.com/",
+        "docs": {
+            "text": "No presenta"
+        },
+        "notes": {
+            "text": "No tienen PoF pero dicen no ofrecer rendimientos",
+            "url": "https://twitter.com/tiendacrypto/status/1595107917120016385?s=61&t=cwVqNmTaVbXgXFQhfaHQpA"
+        }
+    }
+]
