@@ -86,7 +86,7 @@ export default function Home({ exchanges }: HomeProps) {
               Documentos
             </span>
             <span className="text-xs col-span-2 text-[#95959f] hidden lg:block">
-              Última actualización
+              Actualización
             </span>
             <span className="text-xs col-span-4 text-[#95959f] hidden lg:block">
               Estado
@@ -172,17 +172,53 @@ export default function Home({ exchanges }: HomeProps) {
           </div>
         </section>
 
-        <footer className="mt-12 ">
-          Si queres colaborar con algún dato, escribime a{" "}
-          <a
-            href="https://twitter.com/f0go"
-            target="_blank"
-            rel="noreferrer"
-            className="underline text-[#CECECE] inline-flex gap-1"
-          >
-            @f0go
-            <ArrowSvg className="w-4 " />
-          </a>
+        <footer className="mt-12 lg:flex lg:justify-between">
+          <p>
+            <span>
+              Agradecimientos a{" "}
+              <a
+                href="https://twitter.com/facumontanaro_"
+                target="_blank"
+                rel="noreferrer"
+                className="underline text-[#CECECE] inline-flex gap-1"
+              >
+                Facu Montanaro
+              </a>{" "}
+              por el diseño,{" "}
+            </span>
+            <span className="lg:block">
+              <a
+                href="https://twitter.com/AndreusCafe"
+                target="_blank"
+                rel="noreferrer"
+                className="underline text-[#CECECE] inline-flex gap-1"
+              >
+                Andrés Tonello
+              </a>{" "}
+              y{" "}
+              <a
+                href="https://twitter.com/_LautaroLopez"
+                target="_blank"
+                rel="noreferrer"
+                className="underline text-[#CECECE] inline-flex gap-1"
+              >
+                Lautaro López
+              </a>{" "}
+              por la implementación.
+            </span>
+          </p>
+          <span>
+            Si queres colaborar con algún dato, escribime a{" "}
+            <a
+              href="https://twitter.com/f0go"
+              target="_blank"
+              rel="noreferrer"
+              className="underline text-[#CECECE] inline-flex gap-1"
+            >
+              @f0go
+              <ArrowSvg className="w-4 " />
+            </a>
+          </span>
         </footer>
       </main>
     </>
