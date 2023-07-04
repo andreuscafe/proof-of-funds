@@ -1,21 +1,15 @@
 import Head from "next/head";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { Space_Mono, Roboto } from "next/font/google";
 
-import LemonLogo from "../../public/img/icons/lemon.png";
-import ArgenBtcLogo from "../../public/img/icons/argenbtc.png";
-import BuenBitLogo from "../../public/img/icons/buenbit.png";
-import SatoshiTangoLogo from "../../public/img/icons/satoshitango.png";
-import RipioLogo from "../../public/img/icons/ripio.png";
-import DecryptoLogo from "../../public/img/icons/decrypto.png";
-import LetsBitLogo from "../../public/img/icons/letsbit.png";
-import TiendaCryptoLogo from "../../public/img/icons/tiendacrypto.png";
-import BitsoLogo from "../../public/img/icons/bitso.png";
-import BeloLogo from "../../public/img/icons/belo.png";
 import Link from "next/link";
+
+import { ExchangesType, HomeProps } from "../types";
 
 import { ArrowSvg } from "@/components/ArrowSvg";
 import { CryptoText } from "@/components/CryptoText";
+
+import { getLocalData } from "../lib/localData";
 
 const space_mono = Space_Mono({
   variable: "--font-space-mono",
@@ -31,142 +25,16 @@ const roboto = Roboto({
   style: "normal"
 });
 
-type ExchangesType = Array<{
-  name: string;
-  iconPath: StaticImageData;
-  url: string;
-  docs: {
-    text: string;
-    url?: string;
+export async function getStaticProps() {
+  const exchanges: ExchangesType = await getLocalData();
+  return {
+    props: {
+      exchanges,
+    },
   };
-  last_update?: string;
-  notes?: {
-    text: string;
-    url?: string;
-  };
-}>;
+}
 
-const EXCHANGES: ExchangesType = [
-  {
-    name: "Lemon Cash",
-    iconPath: LemonLogo,
-    url: "https://www.lemon.me/",
-    docs: {
-      text: "Prueba de fondos",
-      url: "https://api.lemoncash.com.ar/api/v1/reserves"
-    },
-    last_update: "Realtime",
-    notes: {
-      text: "Estan trabajando en una versión trustless y real-time",
-      url: "https://medium.com/@limoncit0/transparencia-radical-para-cexs-85aad29d8caf"
-    }
-  },
-  {
-    name: "BuenBit",
-    iconPath: BuenBitLogo,
-    url: "https://www.buenbit.com/",
-    docs: {
-      text: "Prueba de fondos",
-      url: "https://drive.google.com/file/d/1kVSy8-aeO0hLFlB17ZX_x-w7339xpe34/view"
-    },
-    last_update: "11/11/2022",
-    notes: {
-      text: "No muestra address de las wallets"
-    }
-  },
-  {
-    name: "Bitso",
-    iconPath: BitsoLogo,
-    url: "https://bitso.com/",
-    docs: {
-      text: "Post sobre transparencia",
-      url: "https://blog.bitso.com/es-mx/bitso-mx/daniel-vogel-bitso-declaracion-nov-10-2022"
-    },
-    last_update: "10/11/2022",
-    notes: {
-      text: "Dicen estar trabajando en un PoF",
-      url: "https://twitter.com/julian_colombo/status/1594713538722930688?s=61&t=5auPmOJkhMmtSTviaZ9McQ"
-    }
-  },
-  {
-    name: "ArgenBTC",
-    iconPath: ArgenBtcLogo,
-    url: "https://argenbtc.com/",
-    docs: {
-      text: "No presenta"
-    },
-    notes: {
-      text: "Dicen estar trabajando en un PoF",
-      url: "https://twitter.com/argenbtc/status/1595480520716173325?s=61&t=8sALSsLKhwBRtfWwE4GulQ"
-    }
-  },
-  {
-    name: "Belo",
-    iconPath: BeloLogo,
-    url: "https://www.belo.app/",
-    docs: {
-      text: "No presenta"
-    },
-    notes: {
-      text: "Dicen estar trabajando en un PoF",
-      url: "https://twitter.com/locosombrero/status/1593784229619449857?s=61&t=_pfJbg1Qq7rT-oabJ3d9Zg"
-    }
-  },
-  {
-    name: "Decrypto",
-    iconPath: DecryptoLogo,
-    url: "https://www.decrypto.la/",
-    docs: {
-      text: "No presenta"
-    },
-    notes: {
-      text: "Dicen estar trabajando en un PoF",
-      url: "https://twitter.com/jl_palacio/status/1595126400108744705?s=61&t=cwVqNmTaVbXgXFQhfaHQpA"
-    }
-  },
-  {
-    name: "Let's Bit",
-    iconPath: LetsBitLogo,
-    url: "https://letsbit.io/",
-    docs: {
-      text: "No presenta"
-    }
-  },
-  {
-    name: "Ripio",
-    iconPath: RipioLogo,
-    url: "https://www.ripio.com/",
-    docs: {
-      text: "No presenta"
-    }
-  },
-  {
-    name: "SatoshiTango",
-    iconPath: SatoshiTangoLogo,
-    url: "https://www.satoshitango.com/",
-    docs: {
-      text: "No presenta"
-    },
-    notes: {
-      text: "No ofrecen rendimientos pero igual estan trabajando en un PoF",
-      url: "https://twitter.com/satoshitango/status/1595468937659092992?s=61&t=8sALSsLKhwBRtfWwE4GulQ"
-    }
-  },
-  {
-    name: "TiendaCrypto",
-    iconPath: TiendaCryptoLogo,
-    url: "https://tiendacrypto.com/",
-    docs: {
-      text: "No presenta"
-    },
-    notes: {
-      text: "No tienen PoF pero dicen no ofrecer rendimientos",
-      url: "https://twitter.com/tiendacrypto/status/1595107917120016385?s=61&t=cwVqNmTaVbXgXFQhfaHQpA"
-    }
-  }
-];
-
-export default function Home() {
+export default function Home({ exchanges }: HomeProps) {
   return (
     <>
       <Head>
@@ -226,7 +94,7 @@ export default function Home() {
           </div>
 
           <div className="font-roboto">
-            {EXCHANGES.map((exchange, index) => (
+            {exchanges.map((exchange, index) => (
               <div
                 key={index}
                 className={`grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 border-b border-[#333333] pt-6 first-of-type:pt-3 pb-6 lg:py-3 items-center text-[#CECECE] lg:hover:bg-[#03030F] hover:text-white transition-colors`}
