@@ -3,16 +3,14 @@ import Head from "next/head";
 import Image from "next/image";
 import { Space_Mono, Roboto } from "next/font/google";
 
-import Link from "next/link";
-
 import { ExchangesType, HomeProps } from "../types";
 
-import { ArrowSvg } from "@/components/ArrowSvg";
 import { CryptoText } from "@/components/CryptoText";
 import { ChevronSvg } from "@/components/ChevronSvg";
 
 import { getLocalData } from "../lib/localData";
 import { orderFunction } from "@/utils/utils";
+import { ExchangeElementList } from "@/components/ExchangeElementList";
 
 const space_mono = Space_Mono({
   variable: "--font-space-mono",
@@ -61,7 +59,7 @@ export default function Home({ exchanges }: HomeProps) {
           <a
             href="https://argentinianswho.design/"
             target="_blank"
-            className="sol w-[96px] order-first lg:order-last lg:col-start-12 col-span-1 lg:col-span-2"
+            className="sol w-[64px] lg:w-[96px] order-first lg:order-last lg:col-start-12 col-span-1 lg:col-span-2"
           >
             <div className="normal">
               <Image
@@ -108,79 +106,7 @@ export default function Home({ exchanges }: HomeProps) {
 
           <div className="font-roboto">
             {orderedExchanges.map((exchange, index) => (
-              <div
-                key={index}
-                className={` grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 border-b border-[#333333] pt-6 first-of-type:border-y first-of-type:pt-3 pb-6 lg:py-3 items-center text-[#CECECE] lg:hover:bg-[#111] hover:text-white transition-colors`}
-              >
-                <Link
-                  href={exchange.url}
-                  target="_blank"
-                  className="lg:col-span-3 flex items-center"
-                >
-                  <Image
-                    src={exchange.iconPath}
-                    alt={exchange.name}
-                    width={32}
-                    height={32}
-                    priority
-                    className="border-[#1D1D1D] border rounded-lg mr-2"
-                  />
-                  <CryptoText text={exchange.name} />
-                </Link>
-
-                <span className="lg:col-span-3 text-[#95959f]">
-                  <span className="col-span-3 text-xs text-[#95959f] font-mono block lg:hidden mb-2">
-                    Documentos
-                  </span>
-                  {exchange.docs.url ? (
-                    <Link
-                      href={exchange.docs.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="underline text-[#CECECE] flex gap-1"
-                    >
-                      <CryptoText text={exchange.docs.text} />
-                      <ArrowSvg className="w-4 flex-shrink-0" />
-                    </Link>
-                  ) : (
-                    exchange.docs.text
-                  )}
-                </span>
-
-                <span
-                  className={`lg:col-span-2 ${
-                    !exchange.last_update ? "text-[#95959f]" : ""
-                  }`}
-                >
-                  <span className="col-span-3 text-xs text-[#95959f] font-mono block lg:hidden mb-2">
-                    Actualizado
-                  </span>
-                  {exchange.last_update ? exchange.last_update : "-"}
-                </span>
-
-                <span className="lg:col-span-4 text-[#95959f]">
-                  <span className="col-span-3 text-xs text-[#95959f] font-mono block lg:hidden mb-2">
-                    Estado
-                  </span>
-                  {exchange.notes ? (
-                    exchange.notes.url ? (
-                      <a
-                        href={exchange.notes.url}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="underline text-[#CECECE] flex gap-1"
-                      >
-                        <CryptoText text={exchange.notes.text} />
-                        <ArrowSvg className="w-4 flex-shrink-0" />
-                      </a>
-                    ) : (
-                      exchange.notes.text
-                    )
-                  ) : (
-                    "-"
-                  )}
-                </span>
-              </div>
+              <ExchangeElementList key={index} exchange={exchange} />
             ))}
           </div>
         </section>
