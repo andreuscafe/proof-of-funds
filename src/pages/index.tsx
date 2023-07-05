@@ -111,7 +111,7 @@ export default function Home({ exchanges }: HomeProps) {
           </div>
         </section>
 
-        <footer className="mt-36 lg:flex lg:justify-between text-[#6E6E73]">
+        <footer className="mt-[48px] lg:mt-36 lg:flex lg:justify-between text-[#6E6E73]">
           <p className="text-[12px] leading-[14px]">
             <span>
               Agradecimientos a{" "}
@@ -146,7 +146,7 @@ export default function Home({ exchanges }: HomeProps) {
               por la implementación.
             </span>
           </p>
-          <p className="text-[12px] leading-[14px]">
+          <p className="text-[12px] leading-[14px] mt-[20px] lg:mt-0">
             Si queres colaborar con algún dato, escribime a{" "}
             <a
               href="https://twitter.com/f0go"
