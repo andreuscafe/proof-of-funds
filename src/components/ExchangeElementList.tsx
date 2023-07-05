@@ -16,8 +16,6 @@ export const ExchangeElementList: FC<ExchangeElementListProps> = ({
 }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
-  console.log(exchange);
-
   return (
     <div
       className={` grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 border-b border-[#333333] pt-6 first-of-type:border-y lg:first-of-type:pt-3 pb-6 lg:py-3 items-center text-[#CECECE] lg:hover:bg-[#111] hover:text-white transition-colors`}
