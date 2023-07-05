@@ -9,7 +9,6 @@ import { CryptoText } from "@/components/CryptoText";
 import { ChevronSvg } from "@/components/ChevronSvg";
 
 import { getLocalData } from "../lib/localData";
-import { ExchangeElementList } from "@/components/ExchangeElementList";
 import { orderFunction } from "@/utils/utils";
 import { ExchangeElementList } from "@/components/ExchangeElementList";
 
