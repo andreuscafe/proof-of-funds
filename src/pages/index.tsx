@@ -11,8 +11,6 @@ import { ChevronSvg } from "@/components/ChevronSvg";
 import { getLocalData } from "../lib/localData";
 import { orderFunction } from "@/utils/utils";
 import { ExchangeElementList } from "@/components/ExchangeElementList";
-import { orderFunction } from "@/utils/utils";
-import { ExchangeElementList } from "@/components/ExchangeElementList";
 
 const space_mono = Space_Mono({
   variable: "--font-space-mono",
